@@ -1,0 +1,172 @@
+$color-main: rgb(61, 60, 60);
+$color-white: #fff;
+$color-red: rgb(229, 47, 55);
+$color-grey: #7c8595;
+$color-green: rgb(39, 179, 106);
+$color-blue: rgb(30, 144, 255);
+$color-yellow: rgb(253, 204, 40);
+
+$color-bluedark: rgb(7, 30, 85);
+
+$font-second: "Roboto", cursive;
+
+$bg-whiteblue: rgb(241, 250, 255);
+
+body {
+  color: $color-main;
+}
+.btn {
+  text-align: center;
+  padding: 15px 20px;
+  background: transparent;
+  font-size: 16px;
+  font-weight: 600;
+  color: $color-white;
+  border-radius: 30px;
+  display: inline-block;
+  cursor: pointer;
+}
+.text-main {
+  font-size: 17px;
+  line-height: 28px;
+  font-weight: 400;
+  color: #7c8595;
+}
+.about-icon {
+  margin-bottom: 15px;
+  display: inline-block;
+  padding: 20px 20px;
+  font-size: 40px;
+  line-height: 46px;
+  text-align: center;
+  color: #fff;
+  border-radius: 20px;
+}
+.green {
+  color: $color-green;
+}
+.red {
+  color: $color-red;
+}
+.blue {
+  color: $color-blue;
+}
+.heading-main {
+  font-size: 38px;
+  line-height: 1.2;
+  margin-top: 0;
+  margin-bottom: 20px;
+  color: $color-bluedark;
+  font-weight: 700;
+}
+.heading-desc {
+  font-size: 18px;
+  line-height: 28px;
+  font-weight: 400;
+  color: #7c8595;
+  margin-bottom: 20px;
+  font-family: "Open Sans", sans-serif;
+}
+
+.overlay--red {
+  position: absolute;
+  background: $color-red;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 0.9;
+  z-index: -1;
+}
+.bg-fiexd {
+  background-image: url(../img/bg3.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top center;
+  background-attachment: fixed;
+  position: relative;
+  z-index: 1;
+}
+@media screen and (max-width: 1280px) {
+  #wrapper {
+    display: none;
+  }
+  .notfound {
+    display: flex !important;
+  }
+}
+.warpper-active {
+  animation: wrapperLoad 2s linear forwards;
+}
+@keyframes wrapperLoad {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 0.6;
+  }
+  50% {
+    opacity: 0.7;
+  }
+  75% {
+    opacity: 0.75;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.notfound {
+  padding: 100px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  display: none;
+}
+.load {
+  position: fixed;
+  right: 0;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  background: $color-white;
+  align-items: center;
+  animation: loader 2s linear forwards;
+  div {
+    border: 3px solid hsla(185, 100%, 62%, 0.2);
+    border-top-color: #3cefff;
+    border-radius: 50%;
+    width: 3em;
+    height: 3em;
+    animation: spin 1s linear infinite;
+  }
+
+  @keyframes spin {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  @keyframes loader {
+    0% {
+      opacity: 1;
+    }
+    25% {
+      opacity: 0.75;
+    }
+    50% {
+      opacity: 0.7;
+    }
+    75% {
+      opacity: 0.6;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  &-active {
+    opacity: 0;
+    z-index: -3;
+  }
+}

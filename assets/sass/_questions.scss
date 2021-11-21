@@ -1,0 +1,30 @@
+.questions {
+  padding: 100px;
+  &-heading {
+    text-align: center;
+  }
+  &-desc {
+    text-align: center;
+    margin-bottom: 50px;
+  }
+  &-items {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0 50px;
+  }
+  &-item {
+    &-content {
+      margin-bottom: 30px;
+      & > h1 {
+        font-size: 20px;
+        color: $color-bluedark;
+        margin-bottom: 20px;
+      }
+      & > p {
+        font-weight: 500;
+        color: $color-main;
+      }
+    }
+  }
+}

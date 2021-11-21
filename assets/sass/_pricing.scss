@@ -1,0 +1,77 @@
+.pricing {
+  padding: 100px;
+  background: $bg-whiteblue;
+  &-items {
+    // display: grid;
+    // grid-template-columns: 1fr 1fr 1fr;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0 50px;
+  }
+  &-form {
+    width: 210px;
+    text-align: center;
+    padding: 70px;
+    border-radius: 7px;
+    border: 1px solid #dde9fb;
+    box-shadow: 0 12px 55px 0 rgb(0 0 0 / 5%);
+    transition: all 0.5s linear;
+    transform: scale(0);
+    cursor: pointer;
+    &-active {
+      transform: scale(1);
+    }
+    &--white {
+      background: $color-white;
+
+      & > a:hover {
+        background: $color-red;
+        color: $color-white;
+      }
+    }
+    &--red {
+      background: $color-red;
+      color: $color-white;
+      & > a {
+        color: $color-white;
+      }
+
+      & > a:hover {
+        background: $color-white;
+        color: $color-red;
+      }
+    }
+    &-desc {
+      &--red {
+        color: $color-white;
+      }
+    }
+    &-heading {
+      & > h3 {
+        font-size: 18px;
+        letter-spacing: 1px;
+        font-weight: 600;
+        margin-bottom: 20px;
+      }
+      & > h1 {
+        font-size: 70px;
+        margin-bottom: 20px;
+      }
+      &--red {
+        & > h1 {
+          font-size: 80px;
+        }
+      }
+    }
+    &-btn {
+      transition: all 0.3s linear;
+      color: $color-red;
+      font-weight: bold;
+      margin-bottom: 50px;
+    }
+  }
+  &-form:hover {
+    transform: scale(1.03);
+  }
+}

@@ -1,0 +1,36 @@
+.footer {
+  padding: 40px 100px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  &-info {
+    font-size: 17px;
+    &-link {
+      color: $color-red;
+      text-decoration: underline;
+      font-family: inherit;
+    }
+    &-link:hover {
+      text-decoration: none;
+    }
+  }
+  &-logo {
+    font-weight: bold;
+  }
+  &-follow {
+    font-size: 17px;
+    &-list {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0 20px;
+    }
+    &-link {
+      font-size: 30px;
+      transition: all 0.3s linear;
+    }
+    &-link:hover {
+      color: $color-red;
+    }
+  }
+}

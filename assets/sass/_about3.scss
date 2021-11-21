@@ -1,0 +1,65 @@
+.about3 {
+  padding: 100px;
+  display: flex;
+  justify-content: center;
+  gap: 0 50px;
+  background: $bg-whiteblue;
+
+  &-item:hover {
+    box-shadow: 0 0 3px 1px rgb(228, 226, 226);
+    background: $color-white;
+  }
+  &-item {
+    display: flex;
+    justify-content: center;
+    gap: 0 30px;
+    padding: 15px;
+    transition: all 0.5s linear;
+    background: transparent;
+    margin-bottom: 10px;
+    cursor: pointer;
+
+    &-icon {
+      border: 1px solid rgb(231, 230, 230);
+      width: 140px;
+      height: 95px;
+      border-radius: 50%;
+      position: relative;
+      background: rgb(255, 254, 254);
+      & > i {
+        position: absolute;
+        font-size: 47px;
+        left: 24%;
+        top: 24%;
+      }
+    }
+    &-info {
+      & > h2 {
+        margin-bottom: 7px;
+      }
+    }
+  }
+  &-left {
+    &-active {
+      box-shadow: 0 0 3px 1px rgb(228, 226, 226);
+      background: $color-white;
+    }
+  }
+  &-right {
+    &-img {
+      display: none;
+      & > img {
+        border-radius: 8px;
+        object-fit: cover;
+        box-shadow: 10px 12px 40px rgb(0 0 0 / 20%);
+      }
+    }
+    &-active {
+      display: block;
+    }
+  }
+}
+// .about3-left-active {
+//   box-shadow: 0 0 3px 1px rgb(228, 226, 226);
+//   background: $color-white;
+// }

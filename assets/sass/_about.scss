@@ -1,0 +1,44 @@
+.about {
+  background: $bg-whiteblue;
+  padding: 90px 0 100px 0;
+  text-align: center;
+
+  &-items {
+    transform: scale(1);
+    transition: all 1s linear;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0 10px;
+    padding: 20px 45px;
+  }
+  &-item {
+    padding: 0 40px;
+    &-heading {
+      margin-bottom: 10px;
+    }
+    &-desc {
+      margin-bottom: 20px;
+    }
+    &-blue {
+      color: $color-white;
+      background: $color-blue;
+    }
+    &-red {
+      color: $color-white;
+      background: $color-red;
+    }
+    &-green {
+      color: $color-white;
+      background: $color-green;
+    }
+  }
+  &-item:hover {
+    animation: item 0.5s linear forwards;
+  }
+}
+@keyframes item {
+  to {
+    transform: scale(1.03);
+  }
+}

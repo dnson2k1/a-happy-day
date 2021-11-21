@@ -1,0 +1,59 @@
+.work {
+  padding: 100px;
+  text-align: center;
+
+  &-desc {
+    margin-bottom: 60px;
+  }
+  &-items {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 0 10px;
+  }
+  &-active {
+    opacity: 1 !important;
+  }
+  &-item {
+    &-imgs {
+      position: relative;
+      cursor: pointer;
+      opacity: 0;
+      transition: all 1s linear;
+
+      &--show {
+        position: absolute;
+        padding: 20px;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background: $color-red;
+        margin-bottom: 10px;
+        opacity: 0;
+        transition: all 0.5s linear;
+      }
+    }
+    &-imgs:hover &-imgs--show {
+      opacity: 0.6;
+    }
+    &-img {
+      width: 100%;
+      position: relative;
+      object-fit: cover;
+    }
+  }
+}
+.show-icon {
+  font-size: 30px;
+  font-weight: bold;
+  color: $color-white;
+  position: absolute;
+  bottom: 50%;
+  left: 20%;
+}
+
+@keyframes showImgWork {
+  to {
+    opacity: 1 !important;
+  }
+}

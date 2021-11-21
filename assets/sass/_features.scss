@@ -1,0 +1,48 @@
+.features {
+  padding: 100px;
+  text-align: center;
+  &-heading {
+    margin-bottom: 10px;
+  }
+  &-desc {
+    margin-bottom: 50px;
+  }
+
+  &-items {
+    display: flex;
+    justify-content: center;
+    gap: 0 50px;
+  }
+  &-item {
+    padding: 10px;
+
+    &-content {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 30px;
+      transition: all 1s linear;
+      opacity: 0;
+
+      &-left {
+        font-size: 50px;
+        margin-right: 40px;
+      }
+      &-right {
+        text-align: initial;
+        &-heading {
+          font-size: 20px;
+          margin-bottom: 10px;
+        }
+        &-desc {
+          font-size: 17px;
+        }
+      }
+    }
+    &-content:last-child {
+      opacity: 1;
+    }
+  }
+  &-active {
+    opacity: 1 !important;
+  }
+}

@@ -1,0 +1,109 @@
+.testimonials {
+  padding: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  background: $bg-whiteblue;
+  gap: 0 100px;
+
+  &-left {
+    padding: 50px 30px;
+    &-heading {
+      font-size: 45px;
+      font-weight: bold;
+      margin-bottom: 10px;
+      line-height: 48px;
+      color: $color-bluedark;
+      & > span {
+        margin: 0;
+        display: block;
+      }
+    }
+    &-desc {
+      margin-bottom: 20px;
+    }
+  }
+  &-right {
+    padding-top: 20px;
+    max-width: 600px;
+    &-item {
+      border-left: 5px solid $color-green;
+      background: $color-white;
+      padding: 25px 40px;
+      cursor: pointer;
+      position: relative;
+      margin-bottom: 20px;
+
+      &-acount {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        & > img {
+          width: 60px;
+          height: 60px;
+          border-radius: 100rem;
+          margin-right: 20px;
+        }
+
+        & > h1 {
+          font-size: 20px;
+
+          & > span {
+            color: $color-green;
+          }
+        }
+      }
+      &-desc {
+        border-top: none;
+        font-weight: 600;
+        letter-spacing: 1.2px;
+        font-size: 20px;
+        color: #7c8595;
+        font-style: italic;
+        background: $color-white;
+        position: relative;
+        line-height: 0;
+        overflow: hidden;
+        transition: 0.2s linear;
+        overflow-y: auto;
+      }
+    }
+  }
+  &-evaluate {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+
+    &-item {
+      margin-right: 70px;
+      &-heading {
+        font-size: 18px;
+        margin-bottom: 10px;
+      }
+      &-star {
+        font-size: 17px;
+        color: $color-yellow;
+
+        & > i {
+          margin-right: 5px;
+        }
+      }
+    }
+    &-item:nth-child(1)::after {
+      content: "";
+      position: absolute;
+      background: #abaaaa;
+      width: 1px;
+      height: 100%;
+      top: 0;
+      right: 62%;
+    }
+  }
+}
+
+.testimonials-right-item.active .testimonials-right-item-desc {
+  padding: 20px 25px 0 0;
+  min-height: 80px;
+  line-height: 25px;
+}

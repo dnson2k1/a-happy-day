@@ -1,0 +1,95 @@
+.header {
+  background-color: $color-white;
+  padding: 15px 16px;
+  transition: all 3s linear;
+}
+.header_fixed {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 999;
+}
+// .header_fixed::before {
+//   content: "";
+//   position: absolute;
+//   background-color: #fff;
+//   bottom: 0;
+//   top: 0;
+//   right: 0;
+//   left: 0;
+//   z-index: -1;
+//   transform: translateY(-100%);
+// }
+// .header_fixed.header_active::before {
+//   animation: scrollNav 0.3s linear forwards;
+// }
+// @keyframes scrollNav {
+//   to {
+//     transform: translateY(0);
+//   }
+// }
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 60px;
+
+  &-logo {
+    & > a {
+      font-size: 40px;
+      font-weight: bold;
+      & > span:nth-child(1) {
+        color: $color-blue;
+      }
+      & > span:nth-child(2) {
+        color: $color-red;
+      }
+      & > span:nth-child(3) {
+        color: $color-green;
+      }
+    }
+  }
+
+  &-list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &-item {
+    margin-right: 25px;
+  }
+  &-link {
+    position: relative;
+    color: $color-main;
+    transition: all;
+    font-size: 17px;
+    font-weight: 600;
+  }
+  &-link::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    top: 20px;
+    height: 5px;
+    background-color: $color-red;
+    animation: nav 0.8s linear forwards;
+    display: none;
+  }
+  &-link:hover::before {
+    display: block;
+  }
+  &-link:hover {
+    color: $color-red;
+  }
+}
+
+@keyframes nav {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}

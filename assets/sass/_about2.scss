@@ -1,0 +1,56 @@
+.about2 {
+  padding: 100px;
+  display: flex;
+  justify-content: center;
+  gap: 0 50px;
+
+  &-left {
+    &-img {
+      border-radius: 8px;
+      object-fit: cover;
+      box-shadow: 10px 12px 40px rgb(0 0 0 / 20%);
+      transform: translateX(-100%);
+    }
+  }
+  &-img-active {
+    animation: business-img 0.5s linear forwards;
+  }
+  @keyframes business-img {
+    to {
+      transform: translateX(0);
+    }
+  }
+  &-right {
+    padding: 20px 10px;
+    &-heading {
+      font-size: 33px;
+      margin-bottom: 20px;
+    }
+    &-desc {
+      margin-bottom: 30px;
+    }
+  }
+  &-list {
+    padding: 0;
+    margin-top: 0;
+    margin-bottom: 10px;
+  }
+  &-items {
+    line-height: 20px;
+    margin-bottom: 15px;
+  }
+  &-icon {
+    color: $color-red;
+    font-size: 17px;
+    margin-right: 10px;
+  }
+  &-btn {
+    background: $color-red;
+    color: $color-white;
+    margin-top: 10px;
+    transition: all 0.8s linear;
+  }
+  &-btn:hover {
+    background: $color-green;
+  }
+}

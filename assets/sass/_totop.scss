@@ -1,0 +1,26 @@
+.toTop {
+  position: fixed;
+  width: 40px;
+  height: 40px;
+  border: 1px solid;
+  font-size: 30px;
+  bottom: 50px;
+  right: 30px;
+  color: $color-red;
+  border-radius: 50%;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  pointer-events: none;
+  opacity: 0;
+  transition: all 0.3s linear;
+  &-active {
+    opacity: 1;
+    pointer-events: auto;
+  }
+  &:hover {
+    background: $color-red;
+    color: $color-white;
+  }
+}
